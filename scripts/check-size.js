@@ -8,6 +8,7 @@ function checkFileSize(filePath) {
   if (!fs.existsSync(filePath)) {
     return
   }
+  console.log(123)
   const file = fs.readFileSync(filePath)
   const minSize = (file.length / 1024).toFixed(2) + 'kb'
   const gzipped = gzipSync(file)
